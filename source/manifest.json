@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "outlook-adblock",
+  "description": "This extension automatically removes the annoying ads that show up as 'emails' in outlook",
+  "version": "0.0.1",
+
+  "content_scripts":
+  [
+    {
+	  "matches": ["*://outlook.live.com/*"],
+	  "js": ["outlook-adblock.js"],
+	  "run_at": "document_end"
+    }
+  ],
+  
+  "permissions": [
+    "activeTab"
+  ]
+}
